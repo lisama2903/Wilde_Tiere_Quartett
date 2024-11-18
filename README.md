@@ -1,2 +1,2 @@
 # Wilde_Tiere_Quartett
-Das sind Quartettkarten über wilde Tiere. Jede Karte enthält spannende Informationen und Illustrationen zu verschiedenen Wildtieren, sodass man beim Spielen spielerisch die faszinierende Vielfalt der Natur entdecken kann.
+Diese Quartettkarten widmen sich der faszinierenden Welt der Wildtiere. Jede Karte bietet detailreiche Illustrationen und interessante Fakten zu den unterschiedlichsten Arten. So verbinden sie auf spielerische Weise Unterhaltung mit Wissensvermittlung über die beeindruckende Vielfalt der Natur.
