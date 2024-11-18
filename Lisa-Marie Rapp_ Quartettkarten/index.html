@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quartettkarte</title>
+  
+
+    <link rel="stylesheet" href="css/fonts.css"> 
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+</head>
+
+<body>
+    <div class="cards-container">
+    <div id="wrapper">
+        <header>
+            <h1>Entdecke die wilde Welt der Tiere!</h1>
+            <button id="ungroupedButton" onclick="showUngroupedCards()">Karten ohne Gruppierung</button>
+            <button id="infoButton">Über das Spiel</button>
+            <button id="startButton">Los gehts!</button>
+            <button id="resetButton">Karten zurücksetzen</button> 
+        </header>
+
+        <div id="cards-container"></div>
+
+        <div id="container">
+            <div id="gameInfo" class="overlay">
+                <div class="overlay-content">
+                    <span class="close-button">&times;</span>
+
+                    <h2>Und so wird gespielt:</h2> 
+
+                    <p><strong>Anzahl der Spieler:</strong> 4 Spieler.</p>
+                    
+                    <p><strong>Kartenverteilung:</strong> Die Karten werden digital gemischt und gleichmäßig an alle 4 Spieler verteilt. Jede Karte zeigt Tierinformationen wie Name, Gruppe, Geschwindigkeit, Gewicht, etc. Spieler können ihre Karten online einsehen (privater Bereich).</p>
+                    <p><strong>Ziel:</strong> So viele Quartette wie möglich sammeln (4 Karten derselben Kategorie/Gruppe).</p>
+                    <h3>Spielablauf:</h3> 
+                    <p><strong>Start:</strong></p>
+                    <p>Der Startspieler wird zufällig bestimmt. Er wählt einen Mitspieler aus und fragt nach einer spezifischen Karte, z. B.: „Hast du das Tier aus der Kategorie Raubkatzen mit dem Namen Gepard?“</p>
+                    <p><strong>Antworten:</strong></p>
+                    <p><span style="color: green;"><strong>Ja:</strong></span> Der angefragte Spieler gibt die verlangte Karte ab. Der Fragende darf weitermachen.</p>
+                    <p><span style="color: red;"><strong>Nein:</strong></span> Der angefragte Spieler klickt auf „Nein“, und der Fragende erhält eine neue Karte aus dem digitalen Stapel (falls verfügbar). Der nächste Spieler ist an der Reihe.</p>
+                    <p><strong>Quartett sammeln:</strong></p>
+                    <p>Hat ein Spieler 4 Karten derselben Gruppe, wird das Quartett automatisch abgelegt. Der Spieler darf sofort weitermachen.</p>
+                    <p><strong>Spielende:</strong></p>
+                    <p>Das Spiel endet, wenn keine Karten mehr im Stapel sind und alle Quartette gesammelt wurden. Der Spieler mit den meisten Quartetten gewinnt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script/animaldata.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

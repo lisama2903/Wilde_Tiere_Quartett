@@ -1,0 +1,345 @@
+:root {
+    --dark-color: #181818;
+    --background-color: rgb(224, 223, 224);
+    
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+
+}
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #2d2d2d;
+    margin: 0;
+    padding: 40px;
+    background-color: var(--background-color);
+   
+}
+h2 {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    color: #28a745;
+    margin: 0;
+    
+}
+
+h3 {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    color: #28a745;
+    margin: 0;
+}
+
+#ungroupedButton {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 25px;
+    right: 120px;
+    padding: 6px 6px;
+    background-color:#28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; 
+    outline: none; 
+}
+
+#ungroupedButton:hover {
+    background-color: #636970;
+    transform: scale(1.1);
+}
+
+#infoButton {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    padding: 6px 6px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; 
+    outline: none; 
+
+}
+
+#startButton {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 6px 6px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; 
+    outline: none; 
+
+}
+#startButton:hover {
+    background-color: #636970; 
+    transform: scale(1.1);
+}
+
+#closeOverlayButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeOverlayButton:hover {
+    background-color: #218838;
+}
+
+
+#resetButton {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+    padding: 12px 12px;
+    background-color: #636970;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; 
+    outline: none;
+    z-index: 1000; 
+}
+
+#resetButton:hover {
+    background-color: #28a745; 
+}
+
+#infoButton:hover {
+    background-color: #636970;
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 80%;
+    text-align: left;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+.close-button:hover {
+    color: #000;
+}
+.card-header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 3fr;
+    padding-right: 30px;
+    /* border-bottom: 2px solid var(--dark-color); */
+}
+
+.card-number {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    /* color: rgb(255, 102, 0); */
+}
+
+.card-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.card-image {
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    grid-row: span 5;
+}
+
+.card-trivia {
+    font-style: italic;
+    font-size: .8rem;
+    text-align: center;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+    height: 50px;
+    /* border-bottom: 1px solid var(--dark-color);
+    border-top: 1px solid var(--dark-color); */
+}
+
+.card-statistics {
+    grid-row: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--dark-color);
+    /* gap: 2px; */
+    font-size: 12px;
+    margin-top: -3px;
+}
+
+.statistics-pair {
+    display: flexbox;
+    /* grid-template-columns: repeat(3, 1fr); */
+    background-color: var(--background-color);
+    font-size: 12px;
+}
+
+.stat-name {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.stat-name img {
+    max-height: 50%;
+    max-width: 50%;
+    object-fit: contain;
+}
+
+.stat-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper {
+    perspective: 1000px;
+    background-color: rgb(175, 175, 175);
+    padding: 10px;
+    display: inline-block;
+    
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-content {
+    width: 300px;
+    height: 450px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #f0f0f0;
+}
+
+.card-back-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    display: grid;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #28a745;
+}
+
+.card-wrapper.flipped .card-inner {
+    transform: rotateY(180deg);
+}
